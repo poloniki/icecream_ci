@@ -1,0 +1,24 @@
+name: Test the changes in the package
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  run-the-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to master branch
+        uses: actions/checkout@v3
+
+      - name: Setup the python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+
+      - name: Install all requirements
+        run: pip install -r requirements.txt
+
+      - name: Run the tests
+        run: pytest -v
