@@ -3,4 +3,4 @@ def predict_sales(temp: int, num_people: int) -> int:
     return int(prediction)
 
 
-# run
+# run new
