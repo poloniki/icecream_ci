@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.10
 COPY icecream icecream/
 COPY setup.py setup.py
 COPY requirements.txt requirements.txt
